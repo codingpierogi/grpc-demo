@@ -7,9 +7,9 @@ package bookstore;
 option go_package = "./bookstore";
 
 service BookManagement {
-    rpc addBook(Book) returns (google.protobuf.StringValue);
-    rpc deleteBook(google.protobuf.StringValue) returns (Book);
-    rpc getBook(google.protobuf.StringValue) returns (Book);
+    rpc AddBook(Book) returns (google.protobuf.StringValue);
+    rpc DeleteBook(google.protobuf.StringValue) returns (Book);
+    rpc GetBook(google.protobuf.StringValue) returns (Book);
 }
 
 message Book {
