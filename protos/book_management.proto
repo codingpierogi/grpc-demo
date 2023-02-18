@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option go_package = "github.com/codingpierogi/grpc-demo/protos";
+
+package bookstore;
+
+service BookManagement {
+    rpc addBook(Book) returns (google.protobuf.StringValue);
+    rpc deleteBook(google.protobuf.StringValue) returns (Book);
+    rpc getBook(google.protobuf.StringValue) returns (Book);
+}
+
+message Book {
+    string id = 1;
+    string title = 2;
+    repeated string authors = 3;
+}
